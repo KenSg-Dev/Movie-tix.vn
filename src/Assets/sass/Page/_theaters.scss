@@ -1,0 +1,152 @@
+.theater {
+  
+   
+    .theater__content {
+        max-width: 940px;
+        margin: 30px auto;
+        @extend .scheduleStyle;
+        
+        img.logo-cinema.theater {
+            display: inline-block;
+        }
+        .infoTheater {
+            display: flex;
+            margin-bottom: 0;
+
+            .text {
+                width: 75%;
+                display: inline-block;
+                margin-left: 10px;
+                line-height: 1.4;
+
+                .main {
+                    color: $color-green-2;
+                }
+            }
+            .address {
+                margin-top: 2px;
+                font-size: 12px;
+                color: #949494;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline-block;
+                width: 100%;
+            }
+            span.detail {
+                color: $color-orange;
+                font-size: 12px;
+                transform: translateY(-5px);
+                display: block;
+            }
+        }
+        .MuiTabScrollButton-vertical {
+            height: 0px;
+            display: none;
+        }
+
+        
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+       
+      }
+      
+    
+      ::-webkit-scrollbar-track {
+        background: #ebebeb;
+      }
+      
+     
+      ::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background: #b6b3b3;
+        transition: all .5s;
+   
+      }
+      
+     
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgb(124, 124, 124);
+        
+      }
+      
+
+    .movie {
+        width: 100%;
+        position: relative;
+
+        .movieInfo {
+            display: flex;
+            img {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+            }
+            .detail {
+                margin-left: 10px;
+
+                p {
+                    font-family: "SF Medium";
+                    margin-bottom: 0;
+                }
+                span {
+                    font-size: 13px;
+                    color: $color-grey-0;
+                }
+            }
+        }
+        
+       
+    }
+
+    .movie::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: calc(100% - 40px);
+        transform: translateX(-50%);
+        border-bottom: 1px solid #fff;
+        border-color: #eeeeeee0;
+    }
+    .theaterList{
+        padding: 20px;
+    }
+}
+
+.list-session{
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+.btn-session {
+  
+    float: left;
+    font-family: "SF Medium";
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 10px 10px 0;
+    padding: 5px 5px;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    background-color: rgba(246, 246, 246, 0.5);
+    border-radius: 7px;
+    color: #9b9b9b;
+    border: 1px solid #e4e4e4;
+    
+    
+    .start-time{
+        color: $color-green-0;
+        font-size: 18px;
+    font-weight: 500;
+    }
+   
+}
+
+
+.cinema{
+    margin-bottom: 100px;
+}
+

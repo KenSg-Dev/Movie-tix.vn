@@ -1,0 +1,41 @@
+.listmovie {
+    margin-top: 100px;
+    text-align: center;
+    .listmovie_nav {
+        margin-bottom: 50px;
+        h4 {
+            color: #fa5238;
+            font-size: 25px;
+        }
+        input {
+            margin-top: 10px;
+            padding: 10px;
+            width: 80%;
+        }
+    }
+
+    .movie-list {
+        text-align: center;
+        width: 85%;
+        margin: 0 auto;
+        
+        .sweet-loading {
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .movie-item{
+            margin-bottom: 55px;
+        }
+    }
+    h2.noti{
+
+        color: #fa5238;
+        font-size: 20px;
+        position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    }
+}

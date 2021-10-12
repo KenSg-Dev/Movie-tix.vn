@@ -1,0 +1,69 @@
+.user {
+    .cover {
+        background-size: cover;
+        height: 400px;
+        margin-top: 60px;
+        width: 75%;
+        margin: 0 auto;
+        border-radius: 10px;
+        position: relative;
+        .avatar {
+            display: block;
+            height: 168px;
+            width: 168px;
+            border-radius: 50%;
+            position: absolute;
+            border: 5px solid $color-white-0;
+            bottom: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .name {
+        margin-top: 50px;
+        text-align: center;
+        font-family: "SF Medium";
+        font-size: 32px;
+    }
+    .mainInfo {
+        width: 75%;
+        margin: 0 auto;
+    }
+    .MuiTablePagination-root{
+        overflow: unset;
+    }
+    .MuiTabs-indicator{
+        display: none;
+    }
+    .MuiTabs-flexContainer{
+        justify-content: center;
+    }
+    .textInfo{
+        width: 90%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+
+.userForm{
+    min-width: 350px;
+    .MuiFormControl-root{
+        display: block;
+        margin: 15px 20px;
+        
+        .MuiOutlinedInput-root{
+            width: 100%;
+        }
+    }
+}
+@include responsive('medium'){
+    .user{
+        .cover{
+            width: 100%;
+            height: 300px;
+        }
+        .mainInfo{
+            width: 95%;
+        }
+    }
+}

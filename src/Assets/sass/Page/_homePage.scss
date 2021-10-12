@@ -1,0 +1,146 @@
+.movie-slick {
+  padding: 40px;
+  margin: 0 200px;
+  text-align: right;
+
+  .slick-slider {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .slick-track {
+    display: flex !important;
+    .slick-slide {
+      // display: flex;
+      height: inherit;
+      // height: 100% !important;
+      .slider-item {
+        .img-movie {
+          height: 100%;
+        }
+      }
+
+      .img-movie {
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 100px;
+    z-index: 2;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .slick-next {
+    right: -70px;
+    background-image: url(../../img/next-session.png);
+  }
+  .slick-prev {
+    left: -70px;
+    background-image: url(../../img/back-session.png);
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    content: unset;
+  }
+  .btn-all {
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: $color-red-1;
+    text-decoration: underline;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .slider-item {
+    text-align: center;
+    height: 100%;
+    background-color: white;
+    .movie-item {
+      width: 100%;
+      padding: 20px 10px 0;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include responsive("extra-large") {
+  .movie-slick {
+    margin: 0 50px;
+  }
+}
+
+@include responsive("medium") {
+  .movie-slick {
+    margin: 0 30px;
+  }
+}
+
+@include responsive("small") {
+  .movie-slick {
+    margin: 0;
+    .slider-item {
+      .movie-item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  .cinema {
+    display: none;
+  }
+}
+
+.pageNotFound {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .text{
+    text-align: center;
+  }
+  h1 {
+    color: $color-orange;
+    font-size: 200px;
+    
+  }
+  h4 {
+    font-size: 70px;
+  }
+  .btn {
+    margin-top: 20px;
+    padding: 20px 30px;
+    background-color: $color-orange;
+    border-radius: 10px;
+    opacity: 0.75;
+    transition: all .5s;
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      color: $color-white-0;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
+  
+}

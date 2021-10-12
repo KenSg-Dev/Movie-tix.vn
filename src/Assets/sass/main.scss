@@ -1,0 +1,29 @@
+@import './Helper/variables';
+@import './Helper/mixin';
+@import './Helper/extend';
+
+
+
+
+@import './Base/reset';
+@import './Base/customize';
+@import './Base/normalized';
+
+@import './Component/movieItem';
+@import './Component/circleStar';
+@import './Component/homeTools';
+@import './Component/schedule';
+@import './Component/loading';
+@import './Component/footer';
+
+@import './Page/theaters';
+@import './Page/userPage';
+@import './Page/homePage';
+@import './Page/carousel';
+@import './Page//login';
+@import './Page/navbar';
+@import './Page/signUp';
+@import './Page/listMoviePage';
+@import './Page/detailMoviePage';
+@import './Page//bookingPage';
+

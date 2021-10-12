@@ -1,0 +1,288 @@
+
+
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 9;
+    .header__left {
+        padding-left: $pd-3;
+        .header__logo {
+            img {
+                display: block;
+                transform: translateY(5px);
+                width: 50px;
+            }
+        }
+    }
+
+    .header__center {
+        display: flex;
+        justify-content: center;
+
+        .nav {
+            transform: translateY(13px);
+            .nav-item {
+                @extend .styleNavItem;
+            }
+        }
+    }
+
+    .header__right {
+        .header__right__content {
+            transform: translateY(12px);
+            width: 100%;
+            text-align: right;
+            .login {
+                @include styleText($fs-0 - 1px, $color-grey-0, normal);
+                padding-right: $pd-1;
+
+                img {
+                    width: 30px;
+                    border-radius: 25px;
+                    margin-right: 5px;
+                }
+
+                p {
+                    display: inline-block;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .MuiAvatar-root{
+                display: inline-block;
+            }
+            span.name{
+                margin-left: 5px;
+                display: inline-block;
+                // transform: translateY(-15px);
+                color: black
+            }
+
+            .accountMenu{
+                .avatarAccount{
+                    img{
+                        width: 40px;
+                        border-radius: 50%;
+                    }
+                }
+                .dropdown-menu{
+                    
+                    @extend .custom-dropdownMenu;
+                    top: 20px!important;
+                }
+                p {
+                    text-align: center;
+                    color: rgb(102, 102, 102);
+                    margin-bottom: 10px;
+                    font-size: 12px;
+                }
+                
+            }
+        }
+    }
+    &:hover {
+        background-color: $color-white-0;
+    }
+}
+
+.header {
+    .header__right__mobile {
+        text-align: right;
+        display: none;
+        padding-right: $pd-3;
+        cursor: pointer;
+        img {
+            width: 25px;
+            height: 16px;
+            transform: translateY(20px);
+        }
+        
+    }
+
+}
+
+#sideMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    
+    .sideNav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        padding-top: $pd-0;
+        background-color: $color-white-0;
+        transition: all .4s;
+        overflow: hidden;
+        
+        overflow-y: scroll;
+
+       
+        
+        
+        .login {
+            display: inline-block;
+            padding: 0 15px;
+            padding-top: $pd-0;
+            a.isLogin{
+                @include styleText($fs-0, $color-black-0, normal);
+                p {
+                    display: inline-block;
+                    letter-spacing: 1px;
+                }
+                img {
+                    width: 36px;
+                    border-radius: 36px;
+                    margin-right: 5px;
+                }
+                &:hover{
+                    text-decoration: none;
+                }
+                
+            }
+
+            .accountMenu{
+         
+                display: inline-block;
+                a.avatarAccount{
+                    display: inline-block;
+                    img{
+                        width: 50px;
+                        border-radius: 50%;
+                    }
+                    span.name{
+                        margin-left: 10px ;
+                        color: $color-black-0;
+                        
+                    }
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                .dropdown-menu{
+                    
+                    @extend .custom-dropdownMenu;
+                    top: 20px!important;
+                }
+                p {
+                    text-align: center;
+                    color: rgb(102, 102, 102);
+                    margin-bottom: 10px;
+                    font-size: 12px;
+                }
+            }
+
+            button.close-btn {
+               
+                position: absolute;
+                right: 10px;
+                background: none;
+                border: none;
+                top: 20px;
+                text-decoration: none;
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+                .close-btn {
+                    width: 15px;
+                }
+            }
+        }
+
+        .sideNav__item{
+            @include styleText($fs-2, $color-black-0, $fw-normal);
+            padding: 20px;
+            display: block;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+
+    .sideNav.fadeOutRight{
+        animation: fadeOutRight;
+        animation-duration: .5s;
+    }
+
+    .sideNav.fadeInRight{
+        animation-name: fadeInRight;
+        animation-duration: .5s;
+    }
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  .dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    
+  }
+  /* Handle */
+  .dropdown-menu::-webkit-scrollbar-thumb {
+    background: #9b9b9b; 
+    border-radius: 4px;
+    /* Handle on hover */
+    &:hover{
+        background: #888; 
+    }
+  }
+  
+
+ 
+
+  .sideNav::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  .sideNav::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    
+  }
+  /* Handle */
+  .sideNav::-webkit-scrollbar-thumb {
+    background: #9b9b9b; 
+    border-radius: 4px;
+    /* Handle on hover */
+    &:hover{
+        background: #888; 
+    }
+  }
+  
+ 
+
+@include responsive("medium") {
+    .header {
+        .header__center {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .header {
+        .header__right {
+            display: none;
+        }
+        .header__right__mobile {
+            display: block;
+        }
+    }
+}

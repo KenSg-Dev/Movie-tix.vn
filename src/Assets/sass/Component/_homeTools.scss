@@ -1,0 +1,116 @@
+.order.row{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.order {
+    max-width: 940px;
+    display: block;
+    height: 80px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-white-0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(116, 109, 109, 0.3);
+    z-index: 2;
+
+    .w30p {
+        width: 30%;
+    }
+
+    .dropdown-menu.listMovie{
+        min-width: 300px;
+    }
+
+    .dropdown-menu{
+        z-index: 3000;
+        
+        max-height: 300px;
+        overflow-y: scroll;
+        top: 100%;
+        button.dropdown-item{
+            transition: all .2s;
+            &:hover{
+                background-color: #60c5ef;
+                color: white;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        
+    }
+
+    .dropdown-menu.show{
+        top: 30px;
+    }
+   
+
+    .smallBlock {
+        width: calc(70% / 4);
+    }
+
+    .selectMenu {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background-color: transparent;
+        border: none;
+        color: #000;
+        cursor: pointer;
+        width: 100%;
+        padding: 7%;
+        background-image: url(../../img/dropdown-icon.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 8px);
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap;
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .btn{
+        &:focus{
+            box-shadow: none;
+        }
+    }
+
+    #btnBuy {
+        
+       
+        text-transform: uppercase;
+        border-radius: 4px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 10px 15px;
+    }
+
+    .widthByPercent {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+        
+            height: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-right: 1px solid #fff;
+            border-right-color: rgba(238, 238, 238, .88);
+        }
+    }
+}
+
+@include responsive('medium'){
+    .homeTools{
+        display: none;
+    }
+}
+

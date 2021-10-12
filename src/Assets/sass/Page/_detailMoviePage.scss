@@ -1,0 +1,309 @@
+.detail-movie {
+    margin-top: 60px;
+    .MuiAppBar-colorDefault {
+        background-color: transparent;
+    }
+    .MuiPaper-elevation4 {
+        box-shadow: none;
+    }
+    button:focus {
+        outline: none;
+    }
+    .backgroundMain {
+        height: fit-content;
+        .styleBlur {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            .img-background {
+                filter: blur(15px);
+                margin: -11px 0 -5px -20px;
+                width: calc(100% + 30px);
+                max-height: 620px;
+                height: auto;
+            }
+        }
+        .styleGradient {
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    }
+}
+
+.detail-movie {
+    @extend .styleTrailerModal;
+    .backgroundMain {
+        position: relative;
+    }
+    .detailMainInfo {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        max-width: 900px;
+        align-items: center;
+       
+        .posterMovie {
+           
+            .posterMovie__img {
+                border-radius: 4px;
+                padding-top: 147.90697674%;
+                background-position: center, 0 0;
+                background-size: 100% auto;
+                background-repeat: no-repeat, repeat-y;
+            }
+            .btn.trailer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+                transition: all 0.2s;
+                opacity: 0;
+                &:hover {
+                    opacity: 1;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .infoMain {
+            // float: none;
+            // clear: both;
+            // position: absolute;
+            // top: 50%;
+            // transform: translateY(-50%);
+            // left: 25%;
+            color: #e9e9e9;
+            .infoMain__time {
+                font-size: 14px;
+            }
+            .infoMain__name {
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+
+            .btn.buyTicket {
+                margin: 20px 0;
+                @extend .custom-btn;
+                opacity: 1;
+                font-size: 16px;
+                padding: 0 30px;
+                &:hover {
+                    background-color: #b42a14;
+                }
+            }
+        }
+
+        .circleStar {
+            text-align: center;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .starMain {
+            display: inline-flex;
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+
+    .contentMain {
+        transform: translate(0, -70px);
+        .MuiTabs-indicator {
+            display: none;
+        }
+        .MuiTab-root {
+            text-transform: none;
+            font-family: unset;
+            transition: all 0.2s;
+        }
+        .MuiTab-textColorPrimary {
+            color: $color-white-0;
+            font-size: 18px;
+        }
+        .MuiTab-textColorPrimary.Mui-selected {
+            color: $color-red-1;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
+
+.detail-movie {
+    background-color: rgb(10, 32, 41);
+    .homeNewsMain {
+        transition: all 0.2s;
+        color: $color-white-0;
+        .detailMain {
+            margin-top: 30px;
+            .rowLeftInfo {
+                p.title {
+                    width: 35%;
+                    float: left;
+                    font-size: 14px;
+                    font-family: 'SF Medium';
+                }
+                p {
+                    color: #e9e9e9 !important;
+                    text-align: justify;
+                    white-space: pre-wrap;
+
+                    width: 100%;
+                    float: left;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .theaterByMovie {
+        margin-top: 30px;
+        background-color: white;
+        border-radius: 5px;
+
+        @extend .scheduleStyle;
+
+        .MuiTabScrollButton-scrollable {
+            height: 20px;
+        }
+
+        .MuiTab-wrapper::after {
+            width: 0;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 5px;
+           
+          }
+          
+        
+          ::-webkit-scrollbar-track {
+            background: #ebebeb;
+          }
+          
+         
+          ::-webkit-scrollbar-thumb {
+            border-radius: 2px;
+            background: #b6b3b3;
+            transition: all .5s;
+       
+          }
+          
+         
+          ::-webkit-scrollbar-thumb:hover {
+            background: rgb(124, 124, 124);
+            
+          }
+          p.noti{
+              text-align: center;
+              margin: 20px 0;
+              color: $color-red-1;
+          }
+    }
+    .theaterItem {
+        .theaterItem__info {
+           
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            p.address {
+                margin-bottom: 0;
+                font-family: "SF Medium";
+                font-size: 16px;
+                .main {
+                    color: $color-green-3;
+                }
+                span:last-child {
+                    font-family: "SF Text Regular";
+                    line-height: 1.7;
+                    font-size: 13px;
+                 
+                    color: $color-grey-0;
+                }
+            }
+        }
+    }
+    img.logo-cinema {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .comment{
+        margin-top: 30px;
+        display: flex;
+        justify-content: left;
+        background-color: $color-white-0;
+        border: 1px solid $color-black-0;
+        border-radius: 5px;
+        padding: 20px;
+        .avatar{
+            display: block;
+            width: 50px;
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+        .text{
+            span.commentRating{
+              
+                color: $color-yellow;
+            }
+            line-height: 20px;
+        }
+    }
+}
+
+@include responsive('medium'){
+    .detail-movie{
+        .detailMainInfo{
+            .posterMovie{
+                margin-top: 120px;
+                .posterMovie__img{
+                    width: 50%;
+                    margin: 30px auto;
+                }
+            }
+            .circleStar{
+                display: none;
+            }
+            .infoMain{
+                display: none;
+            }
+        }
+        .contentMain{
+            margin-top: 50px;
+            transform: translate(0,0);
+        }
+    }
+}
+@include responsive('small'){
+    .detail-movie{
+        .detailMainInfo{
+            .posterMovie{
+                margin-top: 50px;
+               
+                .posterMovie__img{
+                    width: 100%;
+                    margin: 30px auto;
+                }
+            }
+            
+        }
+        .contentMain{
+            margin-top: 100px;
+          
+        }
+        
+    }
+}

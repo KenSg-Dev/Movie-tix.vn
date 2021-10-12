@@ -1,0 +1,217 @@
+.styleNavItem {
+    a{
+        @include styleText($fs-0,$color-black-0, $fw-bold-0);
+        transition: all .2s;
+        &:hover{
+            color: $color-red-1;
+        }
+    }
+}
+
+
+@keyframes fadeInRight{
+    0%{
+        right: -70%;
+        opacity: .5;
+    }
+    100%{
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutRight{
+    0%{
+        right: 0;
+        opacity: 1;
+    }
+    100%{
+        right: -70%;
+        opacity: 0.5;
+    }
+}
+
+
+.custom-form {
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+    input {
+        border-radius: 3px;
+        border-color: #dadfe2;
+        color: #5f6c72;
+        height: 45px;
+        font-size: 14px;
+        padding: 10px;
+        margin: 20px 0;
+        &:focus {
+            box-shadow: none;
+            background-color: #fff;
+            border: 1px solid #499df3;
+            transition: all 0.35;
+        }
+    }
+}
+
+.custom-btn {
+    background: #ff4a00;
+    opacity: 0.5;
+    color: $color-white-0;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 4px;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.custom-title {
+    text-align: center;
+    color: rgb(53, 65, 71);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.custom-dropdownMenu {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px 0px;
+    .dropdown-item {
+        color: rgb(102, 102, 102);
+
+        border-radius: 10px;
+
+        font-weight: 600;
+        min-height: 50px;
+        padding: 0 10px;
+        white-space: nowrap;
+        width: 100%;
+        transition: all 300ms ease-in-out 0s;
+        &:hover {
+            background-color: rgb(242, 242, 242);
+            color: rgb(0, 0, 0);
+        }
+        span {
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 50px;
+        }
+    }
+}
+
+@keyframes FadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.FadeInDown {
+    animation-name: FadeInDown;
+    animation-duration: 0.75s;
+}
+
+.styleButton {
+    background-color: #f2f2f2;
+    color: #136bf5;
+    float: right;
+    padding: 10px 20px;
+    transition: all 0.5s;
+    font-weight: 600;
+    margin-left: 20px;
+    &:hover {
+        background-color: #136bf5;
+        color: #ffffff;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+
+.styleTrailerModal{
+    .modal {
+        padding-right: 0 !important;
+        width: 100vw;
+        .modal-dialog {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            .modal-content {
+                background-color: unset;
+                border: unset;
+                .modal-body {
+                    position: relative;
+                    padding: 0;
+                    padding-bottom: 56.25%;
+                    padding-top: 25px;
+                    height: 0;
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    button.close {
+                        position: absolute;
+                        top: -22px;
+                        right: -22px;
+                        z-index: 1060;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .modal.show {
+        padding-right: unset;
+    }
+}
+
+
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-dialog {
+        width: 900px;
+    }
+}
+
+@keyframes loadingAnimation {
+    from {
+        opacity: 1;
+        transform: scale3d(1,1,1)
+    }
+
+    10%,30%,50%,70%,90% {
+        transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,7deg)
+    }
+
+    20%,40%,60%,80% {
+        transform: scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-7deg)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(1,1,1)
+    }
+}
